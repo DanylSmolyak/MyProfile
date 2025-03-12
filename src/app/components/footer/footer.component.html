@@ -1,0 +1,26 @@
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="footer-logo-text">Smolyak Danylo</span>
+        <p class="footer-description">.Net Developer</p>
+      </div>
+
+      <div class="footer-social">
+        <h3 class="footer-heading">Find me</h3>
+        <ul class="social-links">
+          <li *ngFor="let link of socialLinks" class="social-link">
+            <a [href]="link.url" target="_blank">{{ link.name }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3 class="footer-heading">Contacts</h3>
+        <p>Email: smolakdanil35&#64;gmail.com</p>
+
+        <p>Phone: +380955433084</p>
+      </div>
+    </div>
+  </div>
+</footer>

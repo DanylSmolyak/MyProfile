@@ -1,0 +1,20 @@
+<div class="work-experience">
+  <h2 class="section-subtitle">Experience</h2>
+
+  <div class="timeline">
+    <div *ngFor="let job of workExperience" class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content card">
+        <div class="job-header">
+          <h3 class="job-title">{{ job.title }}</h3>
+          <span class="job-company">{{ job.company }}</span>
+        </div>
+        <div class="job-period">{{ job.startDate }} - {{ job.endDate || 'настоящее время' }}</div>
+        <p class="job-description">{{ job.description }}</p>
+        <div class="job-skills">
+          <span *ngFor="let skill of job.skills" class="skill-tag">{{ skill }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

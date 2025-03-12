@@ -1,0 +1,10 @@
+<!-- src/app/components/tech-stack/tech-stack.component.html -->
+<div class="tech-stack">
+  <h2 class="section-title">My skills</h2>
+
+  <div class="skills-container">
+    <div *ngFor="let tech of technologies" class="skill-item">
+      <span class="skill-name">{{ tech.name }}</span>
+    </div>
+  </div>
+</div>

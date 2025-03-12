@@ -1,0 +1,16 @@
+<header class="header">
+  <div class="container header-container">
+    <a href="#" class="logo">
+      <span class="logo-text">.Net Developer</span>
+    </a>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-item" *ngFor="let item of navItems">
+          <a [href]="item.route" class="nav-link" (click)="scrollToSection($event, item.route.substring(1))">
+            {{ item.label }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

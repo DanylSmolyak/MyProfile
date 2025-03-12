@@ -1,0 +1,54 @@
+<!-- src/app/components/about/about.component.html -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <h1 class="section-title">SUMMARY</h1>
+
+    <div class="about-content">
+      <div class="about-info">
+        <div class="about-header">
+          <div class="about-header-main">
+            <h2 class="about-name">{{ personalInfo.name }}</h2>
+            <div class="about-title-container">
+              <h3 class="about-title">{{ personalInfo.title }}</h3>
+              <span class="about-years">{{ personalInfo.yearsExperience }}</span>
+            </div>
+            <p class="about-experience">{{ personalInfo.experience }}</p>
+          </div>
+          <div class="about-contact-info">
+            <div class="contact-item">
+              <i class="contact-icon email-icon"></i>
+              <span>{{ personalInfo.email }}</span>
+            </div>
+            <div class="contact-item">
+              <i class="contact-icon phone-icon"></i>
+              <span>{{ personalInfo.phone }}</span>
+            </div>
+            <div class="contact-item">
+              <i class="contact-icon location-icon"></i>
+              <span>{{ personalInfo.location }}</span>
+            </div>
+            <div class="social-icons">
+              <a [href]="personalInfo.linkedin" target="_blank" class="social-icon linkedin-icon" title="LinkedIn"></a>
+              <a [href]="personalInfo.github" target="_blank" class="social-icon github-icon" title="GitHub"></a>
+              <a [href]="personalInfo.telegram" target="_blank" class="social-icon telegram-icon" title="Telegram"></a>
+            </div>
+          </div>
+        </div>
+        <p class="about-description">{{ personalInfo.description }}</p>
+
+      </div>
+    </div>
+
+    <div id="skills">
+      <app-skills></app-skills>
+    </div>
+
+    <div id="experience">
+      <app-work-experience></app-work-experience>
+    </div>
+
+    <div id="projects">
+      <app-projects></app-projects>
+    </div>
+  </div>
+</section>

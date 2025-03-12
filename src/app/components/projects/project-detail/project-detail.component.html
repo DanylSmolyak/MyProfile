@@ -1,0 +1,35 @@
+<!-- src/app/components/project-detail/project-detail.component.html -->
+<section class="section project-detail-section" *ngIf="project">
+  <div class="container">
+    <a routerLink="/about" class="back-link">
+      <span>← Назад к проектам</span>
+    </a>
+
+    <h1 class="section-title">{{ project?.title }}</h1>
+
+    <div class="project-detail-content">
+      <div class="project-detail-image">
+        <img [src]="project?.imageUrl" [alt]="project!.title">
+      </div>
+
+      <div class="project-detail-info">
+        <div class="project-description">
+          <h2>Описание</h2>
+          <p>{{ project?.fullDescription }}</p>
+        </div>
+
+        <div class="project-tech-stack">
+          <h2>Технологии</h2>
+          <div class="tech-tags">
+            <span *ngFor="let tech of project.technologies" class="tech-tag">{{ tech }}</span>
+          </div>
+        </div>
+
+        <div class="project-links">
+          <a [href]="project?.githubUrl" target="_blank" class="btn">GitHub</a>
+          <a *ngIf="project?.demoUrl" [href]="project?.demoUrl" target="_blank" class="btn btn-outline">Демо</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

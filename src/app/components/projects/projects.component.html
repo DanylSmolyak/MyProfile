@@ -1,0 +1,32 @@
+<!-- src/app/components/projects/projects.component.html -->
+<section class="section projects-section">
+  <div class="container">
+    <h1 class="section-title">My projects</h1>
+
+    <div class="projects-grid">
+      <div *ngFor="let project of projects" class="project-card card">
+        <div class="project-content">
+          <div class="project-info">
+            <div class="project-header">
+              <h3 class="project-title">{{ project.title }}</h3>
+              <a [href]="project.githubUrl" target="_blank" class="github-link" title="GitHub Repository">
+                <i class="github-icon"></i>
+              </a>
+            </div>
+
+            <p class="project-description">{{ project.fullDescription }}</p>
+
+            <div class="project-tech">
+              <span *ngFor="let tech of project.technologies" class="tech-tag">{{ tech }}</span>
+            </div>
+
+            <div class="project-links">
+              <a [href]="project.githubUrl" target="_blank" class="btn">GitHub</a>
+              <a *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank" class="btn btn-outline">Демо</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
