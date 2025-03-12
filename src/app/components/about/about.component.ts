@@ -25,8 +25,8 @@ export class AboutComponent {
     email: 'smolakdanil35@gmail..com',
     phone: '+380 955 433 084',
     location: 'Kyiv',
-    linkedin: 'https://linkedin.com/in/yourprofile',
-    github: 'https://github.com/yourusername',
-    telegram: 'https://t.me/yourusername'
+    linkedin: 'https://www.linkedin.com/in/danylo-smolyak-413951352/',
+    github: 'https://github.com/DanylSmolyak',
+    telegram: 'https://t.me/danil_sm11'
   };
 }
